@@ -5,4 +5,6 @@ Clone this repository
 
   -Set the environment:
 
+FIRSTNAME = "Your first name"
+LASTNAME = "Your last name"
 API_KEY= "You api key to be displayed"

@@ -1,5 +1,9 @@
 require("dotenv").config("./.env");
 
+if ((!process.env.API_KEY, !process.env.FIRSTNAME, !process.env.LASTNAME)) {
+  throw new Error("Missing required environment variables");
+}
+
 const http = require("http");
 const hostname = "127.0.0.1";
 const port = 3000;
@@ -21,6 +25,7 @@ const server = http.createServer((req, res) => {
   res.end(`
     <html>
       <body>
+      <h3>Welcome ${process.env.FIRSTNAME} ${process.env.LASTNAME}</h3>
         <h1>Directory Contents:</h1>
         ${fileList}
         <h1>Api key:</h1>
