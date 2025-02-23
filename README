@@ -1,0 +1,8 @@
+Clone this repository
+
+- Run npm i
+  -Create a .env file
+
+  -Set the environment:
+
+API_KEY= "You api key to be displayed"
